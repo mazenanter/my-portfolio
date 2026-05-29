@@ -1,0 +1,39 @@
+<nav class="parent" [class.scrolled]="isScrolled">
+  <div class="my-container">
+    <a href="#hero" class="nav-logo" (click)="closeMenu()">
+      <span class="logo-bracket"> &lt; </span>
+      <div class="name">Mazen Anter</div>
+      <span class="logo-bracket"> /&gt; </span>
+      <span class="d-block stack">BACKEND DEVELOPER</span>
+    </a>
+
+    <ul class="nav-links">
+      <li *ngFor="let link of navLinks">
+        <a
+          [href]="link.href"
+          class="nav-link"
+          [class.active]="activeSection == link.id"
+          (click)="changeActiveSection(link.id)"
+        >
+          {{ link.name }}
+        </a>
+      </li>
+    </ul>
+    <a class="contact" href="#contact">Contact</a>
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <ul>
+      <li *ngFor="let link of navLinks">
+        <a [href]="link.href" (click)="closeMenu()">
+          {{ link.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Colors */
+  --color-bg-primary: #111827;
+  --color-bg-secondary: #1F2937;
+  --color-bg-card: #1a1a1a;
+  --color-bg-card-hover: #222222;
+  --bg-warm : #3B95F61A;
+  --border-warm:rgba(59, 130, 246, 0.2);
+  --color-accent: #258FEB;
+  --color-accent-light: #D4B57E;
+  --color-accent-glow: rgba(201, 169, 110, 0.28);
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #555555;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-accent: rgba(201, 169, 110, 0.4);
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --font-heading: 'Poppins', sans-serif;
+--font-body: 'Inter', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-padding: 0 24px;
+
+  /* Borders */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-accent: 0 0 30px rgba(201, 169, 110, 0.2);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+/* ===== TYPOGRAPHY UTILITIES ===== */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+/* ===== SECTION BASE ===== */
+.section {
+  padding: var(--section-padding);
+}
+
+/* ===== SELECTION COLOR ===== */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

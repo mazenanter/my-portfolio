@@ -1,0 +1,183 @@
+.experience {
+    margin-top: 45px;
+   padding-bottom: 60px;
+   
+    background: radial-gradient(circle at 10% 18%, rgba(37, 143, 235, 0.14) 0%, transparent 40%), radial-gradient(circle at 88% 82%, rgba(59, 149, 246, 0.14) 0%, transparent 42%), linear-gradient(rgb(11, 19, 36) 0%, rgb(17, 28, 47) 100%);
+ opacity: 0;
+    transform: translateY(40px);
+    animation: sectionFadeIn 0.8s ease forwards;
+
+}
+
+.head-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    
+    
+}
+
+.head-title h1::before {
+    position: absolute;
+    content: "\f0b1";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--color-accent);
+    top: 50%;
+    bottom: 50%;
+    left: -45px;
+    transform: translateY(-50%);
+
+}
+.head-title h1::after {
+    position: absolute;
+    content: "";
+    width: 130%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: var(--color-accent);
+    top: 88%;
+    left: -7px;
+    bottom: 25px;
+    transform: translatex(-40px);
+
+}
+
+.experience-item {
+
+    background-color: rgb(31 41 55 / 1);
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: 45px;
+    
+    border-radius: 6px;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    transition: 0.3s ease-in-out ;
+}
+.experience-item:hover {
+    transform: scale(1.02);
+    border-color: var(--color-accent);
+box-shadow: 0 0 6px rgba(59, 130, 246, 0.25), 0 0 10px rgba(59, 130, 246, 0.18), 0 0 30px rgba(59, 130, 246, 0.12);
+
+}
+.header p {
+    color: var(--color-accent);
+    font-size: 16px;
+}
+.header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+
+}
+.company{
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+.company i, .company span {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-right: 10px;
+}
+ul li {
+    margin-bottom: 12px;
+    font-weight: 400;
+     position: relative;
+    padding-left: 22px;
+}
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-size: 22px;
+    animation: bulletGlow .8s ease-in-out infinite alternate;
+
+}
+ul {
+    list-style: none;
+}
+.job {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+@keyframes bulletGlow {
+
+    from {
+        color: #258FEB;
+        text-shadow:
+            0 0 4px rgba(37, 143, 235, 0.3),
+            0 0 6px rgba(37, 143, 235, 0.2);
+    }
+
+    to {
+        color: #5fb8ff;
+
+        text-shadow:
+            0 0 8px rgba(37, 143, 235, 0.7),
+            0 0 14px rgba(37, 143, 235, 0.5),
+            0 0 20px rgba(37, 143, 235, 0.3);
+    }
+}
+.header {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+@media (max-width: 768px) {
+     .experience .head-title h1 {
+        font-size: 24px;
+        padding-top: 40px;
+    }
+
+    .experience .head-title h1::before {
+        font-size: 22px;
+        left: -30px;
+    }
+
+    .experience .head-title h1::after {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .header h3 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .experience-item {
+        padding: 18px;
+        margin: 30px 12px 0;
+    }
+
+    .job {
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}@keyframes sectionFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

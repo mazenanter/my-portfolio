@@ -1,0 +1,285 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  /* background: radial-gradient(ellipse at center, #0d1b2a 0%, #0a0f1e 100%); */
+  background: radial-gradient(ellipse at center, #0d1b2a 0%, #0a0f1e 100%);
+
+}
+
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+     position: relative;
+  z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.head h1 {
+    color: white;
+        font-weight: bold;
+        font-size: 3.75rem;
+        font-family: var(--font-heading);
+}
+
+.head .name {
+    color: var(--color-accent);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 3.75rem;
+    margin: 0 0 12px; 
+    font-family: var(--font-heading);
+    animation: glow 2s ease-in-out infinite alternate;
+
+
+}
+.contact {
+  border: 1px solid var(--color-accent);
+  background-color: transparent;
+  color : var(--color-accent);
+  border-radius: 999px;
+   padding: 0.75rem 2rem;
+  width: fit-content;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+.title h2 {
+    font-size: 1.875rem;
+    margin: 0 0 32px;
+    font-weight: bold;
+    /* font-family: var(--font-heading); */
+     font-family: 'JetBrains Mono', monospace;
+}
+.bio {
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    margin: 0 0 15px;
+    text-align: center;
+    max-width: 850px;
+}
+.bio p {
+    text-align: center;
+    
+}
+.contact:hover {
+  border-color: var(--border-warm);
+  color: white;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+}
+.buttons {
+    margin-top: 1.5rem;
+}
+.cv-btn {
+    background-color: var(--color-accent);
+    color : white;
+    margin-right: 1.5rem;
+    border-radius: 999px;
+   padding: 0.75rem 2rem;
+    width: fit-content;
+    text-decoration: none;
+   
+    transition: 0.3s ease;
+
+}
+.cv-btn:hover {
+  box-shadow:  0 0 10px rgba(37, 143, 235, 0.5), 0 0 15px rgba(37, 143, 235, 0.2);
+}
+.hero-content {
+
+    animation: fadeHero 0.8s ease;
+}
+
+@keyframes fadeHero {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(37, 143, 235, 0.2);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(37, 143, 235, 0.5), 0 0 30px rgba(37, 143, 235, 0.2);
+  }
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media (max-width: 992px) {
+
+    .hero-content {
+
+        padding: 0 24px;
+    }
+
+    .head h1,
+    .head .name {
+
+        font-size: 3rem;
+    }
+
+    .title h2 {
+
+        font-size: 1.5rem;
+    }
+
+    .bio {
+
+        max-width: 700px;
+
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 100vh;
+
+        padding-top: 80px;
+    }
+
+    .hero-content {
+
+        padding: 0 20px;
+
+        justify-content: center;
+    }
+
+    /* heading */
+
+    .head h1 {
+
+        font-size: 2.4rem;
+
+        line-height: 1.3;
+    }
+
+    .head .name {
+
+        display: block;
+
+        font-size: 2.5rem;
+
+        margin-top: 6px;
+    }
+
+    /* title */
+
+    .title h2 {
+
+        font-size: 1.2rem;
+
+        margin-bottom: 24px;
+
+        line-height: 1.6;
+    }
+
+    /* bio */
+
+    .bio {
+
+        font-size: 16px;
+
+        line-height: 1.9;
+
+        max-width: 100%;
+    }
+
+    /* buttons */
+
+    .buttons {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    .cv-btn,
+    .contact {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        margin: 0;
+
+        text-align: center;
+
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .hero-content {
+
+        padding: 0 16px;
+    }
+
+    .head h1 {
+
+        font-size: 2rem;
+    }
+
+    .head .name {
+
+        font-size: 2.1rem;
+    }
+
+    .title h2 {
+
+        font-size: 1rem;
+    }
+
+    .bio {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .cv-btn,
+    .contact {
+
+        max-width: 100%;
+    }
+}

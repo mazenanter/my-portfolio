@@ -1,0 +1,46 @@
+<section class="projects reveal" id="projects">
+  <div class="head-title reveal"><h1>Projects</h1></div>
+  <div class="projects-grid reveal">
+    @for (project of projects; track $index) {
+      <div class="project-card reveal">
+        <img class="project-image" [src]="project.image" />
+
+        <div class="project-content reveal">
+          <h3>{{ project.name }}</h3>
+          <div class="challenge">
+            <i class="fa-solid fa-circle-info"></i>
+            <strong>Challenge</strong> <span>{{ project.challenge }}</span>
+          </div>
+          <div class="action">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <strong>Action</strong> <span>{{ project.action }}</span>
+          </div>
+          <div class="result">
+            <i class="fa-solid fa-circle-check"></i>
+            <strong>Result</strong> <span>{{ project.result }}</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            @for (stack of project.techStack; track $index) {
+              <div class="stack">{{ stack }}</div>
+            }
+          </div>
+        </div>
+        <hr />
+        <div class="links d-flex gap-4">
+          @if (project.githubUrl != null && project.githubUrl != "") {
+            <div class="github-link d-flex align-items-center gap-2">
+              <i class="fa-brands fa-github"></i>
+              <a [href]="project.githubUrl" target="_blank">GitHub</a>
+            </div>
+          }
+          @if (project.liveUrl != null && project.liveUrl != "") {
+            <div class="live-link d-flex align-items-center gap-2">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a [href]="project.liveUrl" target="_blank">Live Demo</a>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,392 @@
+/* .contact {
+    background-color: var(--color-bg-secondary);
+     padding-bottom: 30px;
+    color: white;
+}
+
+.head-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+.head-title h1::before {
+    position: absolute;
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--color-accent);
+    top: 50%;
+    bottom: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+.head-title h1::after {
+    position: absolute;
+    content: "";
+    width: 125%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: var(--color-accent);
+    top: 88%;
+    left: 0;
+    bottom: 25px;
+    transform: translatex(-40px);
+
+}
+.head {
+    text-align: center;
+    padding-top: 20px;
+}
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+} */
+
+.contact {
+    background:
+        radial-gradient(circle at top right,
+            rgba(37, 143, 235, 0.12),
+            transparent 35%),
+
+        linear-gradient(
+            180deg,
+            #0f172a 0%,
+            #111827 100%
+        );
+
+    padding-bottom: 80px;
+    color: white;
+}
+
+/* ================= TITLE ================= */
+
+.head-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+.head-title h1::before {
+    position: absolute;
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--color-accent);
+    top: 50%;
+    bottom: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+.head-title h1::after {
+    position: absolute;
+    content: "";
+    width: 125%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: var(--color-accent);
+    top: 88%;
+    left: 0;
+    bottom: 25px;
+    transform: translatex(-40px);
+
+}
+
+/* ================= HEAD ================= */
+
+.contact .head {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact .head h3 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contact .head p {
+    color: #9ca3af;
+    font-size: 18px;
+}
+
+/* ================= BODY ================= */
+
+.contact-body {
+    max-width: 1100px;
+    margin: 60px auto 0;
+
+    padding: 0 clamp(1rem, 3vw, 2.5rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ================= INFO ================= */
+
+.contact-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.info-item {
+    background: rgba(21, 29, 44, 0.9);
+
+    border: 1px solid rgba(59, 130, 246, 0.15);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    gap: 18px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.info-item:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--color-accent);
+
+    box-shadow:
+        0 0 12px rgba(37, 143, 235, 0.2),
+        0 0 24px rgba(37, 143, 235, 0.1);
+}
+
+/* icons */
+
+.info-item i {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(37, 143, 235, 0.1);
+
+    color: var(--color-accent);
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* text */
+
+.info-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.info-item p,
+.info-item a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--color-accent);
+}
+
+/* ================= SOCIAL ================= */
+
+.social-links {
+
+    margin-top: 50px;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.social-links .link {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(21, 29, 44, 0.9);
+
+    border: 1px solid rgba(59, 130, 246, 0.15);
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* icon */
+
+.social-links .link i {
+
+   
+
+    font-size: 24px;
+
+    transition: .3s ease;
+}
+
+/* hover */
+
+.social-links .link:hover {
+
+    transform: translateY(-6px) scale(1.05);
+
+    border-color: var(--color-accent);
+
+    box-shadow:
+        0 0 10px rgba(37, 143, 235, 0.3),
+        0 0 22px rgba(37, 143, 235, 0.18);
+}
+
+.social-links .link:hover i {
+
+    text-shadow:
+        0 0 8px rgba(37, 143, 235, 0.6);
+
+    transform: scale(1.08);
+}
+
+.linkedin i {
+    color: #0A66C2;
+}
+
+.github i {
+    color: #f5f5f5;
+}
+
+.whatsapp i {
+    color: #25D366;
+}
+
+.twitter i {
+    color: #ffffff;
+}
+
+
+
+.facebook i {
+    color: #1877F2;
+}
+
+/* ================= HOVER GLOW لكل منصة ================= */
+
+.linkedin:hover {
+    border-color: #0A66C2;
+
+    box-shadow:
+        0 0 10px rgba(10, 102, 194, 0.35),
+        0 0 24px rgba(10, 102, 194, 0.2);
+}
+
+.github:hover {
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.25),
+        0 0 24px rgba(255, 255, 255, 0.12);
+}
+
+.whatsapp:hover {
+    border-color: #25D366;
+
+    box-shadow:
+        0 0 10px rgba(37, 211, 102, 0.35),
+        0 0 24px rgba(37, 211, 102, 0.2);
+}
+
+.twitter:hover {
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.28),
+        0 0 24px rgba(255, 255, 255, 0.14);
+}
+.facebook:hover {
+    border-color: #1877F2;
+
+    box-shadow:
+        0 0 10px rgba(24, 119, 242, 0.35),
+        0 0 24px rgba(24, 119, 242, 0.2);
+}
+/* ================= ANIMATION ================= */
+
+@keyframes floatIcon {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .contact-info {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contact .head h3 {
+
+        font-size: 34px;
+    }
+
+    .info-item {
+
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,22 @@
+<section class="skills reveal" id="skills">
+  <div class="head-title reveal"><h1>Skills</h1></div>
+  <div class="skills-grid reveal">
+    @for (item of skillCategories; track $index) {
+      <div class="skill-card reveal">
+        <div class="head d-flex align-items-center">
+          <div class="skill-icon">
+            <i [class]="item.icon"></i>
+          </div>
+          <h3>{{ item.name }}</h3>
+        </div>
+        <div class="skill-list d-flex flex-wrap gap-3 mt-4">
+          @for (skill of item.skills; track $index) {
+            <div class="skill">
+              {{ skill.name }}
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
