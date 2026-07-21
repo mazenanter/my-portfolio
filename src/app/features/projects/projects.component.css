@@ -17,7 +17,8 @@ opacity: 0;
     padding-bottom: 20px;
     position: relative;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0  auto 45px auto;
+    
 }
 
 .head-title h1::before {
@@ -51,6 +52,7 @@ opacity: 0;
     height: 380px;
     object-fit: fill;
     border-radius: 12px 12px 0 0;
+   
 }
 .projects-grid {
     
@@ -77,16 +79,7 @@ padding: 0 clamp(1rem, 3vw, 2.5rem);
      
    
 }
-.project-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 700px;
-    width: 100%;
-    justify-self: center;
-}
-.project-card:not(:last-child){
-    margin-top: 45px;
 
-}
 .project-card:hover {
 
     transform: translateY(-6px) scale(1.01);

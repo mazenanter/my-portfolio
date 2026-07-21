@@ -12,11 +12,21 @@ export class ProjectsComponent {
     name: "API Gateway & Integration Engine",
     image: "api.jpg",
     techStack: ["ASP.NET Core", "Clean Architecture", "JWT", "IP Whitelisting", "API Key Management","SQL Server"],
-    challenge: "Build a secure, production-grade API layer for a live commercial platform handling digital goods and gaming services with multi-provider order routing.",
-    action: "Architected a full API Gateway with API Key Management, IP Whitelisting, Role-Based Admin Dashboard, and an Intelligent Order Routing System that automatically forwards orders to local or third-party providers.",
-    result: "Delivered a live system at api.shop2change.com with automated profit management, developer-friendly Swagger documentation, and real-time admin control over all API access.",
+    challenge: "Build a secure, production-grade API layer for a live commercial platform handling digital goods and gaming services with multi-provider order routing, automated pricing, and reliable external provider integrations.",
+    action: "Architected a complete API Gateway featuring API Key Management, IP Whitelisting, and a Role-Based Admin Dashboard. Engineered an Intelligent Order Routing System that automatically routes requests to local or third-party providers while applying dynamic pricing and automated profit calculation.",
+    result: "Delivered a live production system at api.shop2change.com with secure API access, automated profit management, developer-friendly Swagger documentation, and centralized real-time administration.",
     githubUrl: "",
     liveUrl: "https://api.shop2change.com"
+  },
+    {
+    name: "FinMind – ERP & Accounting System",
+    image: "erp.png",
+    techStack: ["ASP.NET Core", "Clean Architecture", "JWT", "CQRS", "DDD","MediatR","SQL Server","Docker","GitHub Actions","xUnit"],
+    challenge: "Build an enterprise-grade ERP and accounting backend where complex financial rules, inventory valuation, and transactional consistency are enforced by the domain model instead of application services.",
+    action: "Architected the system using Clean Architecture, CQRS, and Domain-Driven Design, implementing a double-entry accounting engine, Weighted Average Cost (WAC) inventory valuation, JWT authentication, comprehensive unit testing, Docker containerization, and an automated CI/CD pipeline.",
+    result: "Delivered a production-ready ERP backend with fully auditable financial workflows, automated accounting entries, high test coverage, containerized deployment, and a complete GitHub Actions pipeline from build to production.",
+    githubUrl: "https://github.com/FinMind",
+    liveUrl: "http://finmind.runasp.net"
   },
   {
     name: "SpaceZ — Co-Working Space Management",
